@@ -8,11 +8,13 @@ class Client():
         return Quote.retrieve(symbol)
     
     def apply(self, symbol, requestFn, saveFn):
-        return saveFn(symbol, requestFn(symbol))
+        return saveFn(symbol, requestFn(symbol).data)
     
-    def save(self, symbol, data):
-        toJSON(self._build_filename(symbol), data)
+    @classmethod
+    def save(cls, symbol, data):
+        toJSON(cls._build_filename(symbol), data)
         return data
     
-    def _build_filename(self, symbol):
+    @classmethod
+    def _build_filename(cls, symbol):
         return '{}.json'.format(symbol)

@@ -5,7 +5,6 @@ from cnbc.interfaces.option import Option
 
 from cnbc.interfaces.object_base import ObjectBase
 
-
 class OptionsChain(ObjectBase):
     def __init__(self, payload={}):
         super()

@@ -1,7 +1,7 @@
 install:
-	pip install -r requirements.txt
+	pip3 install -r requirements.txt
 setup:
-	python setup.py install
+	python3 setup.py install
 lint:
 	pylint * --ignore build dist
 lint-fix:

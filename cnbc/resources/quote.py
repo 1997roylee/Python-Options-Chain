@@ -4,6 +4,8 @@ import requests
 from cnbc.api_response import ApiResponse
 from cnbc.interfaces import OptionsChain
 
+API_ENDPOINT = "https://cdn.cboe.com/api/global/delayed_quotes/options/"
+
 class Quote():
     def __init__(self, symbol):
         self.symbol = symbol
@@ -18,7 +20,6 @@ class Quote():
         
     @classmethod
     def _build_instance_url(cls, symbol):
-        API_ENDPOINT = "https://cdn.cboe.com/api/global/delayed_quotes/options/"
         return '{}{}.json'.format(API_ENDPOINT, symbol)
     
     def instance_url(self):

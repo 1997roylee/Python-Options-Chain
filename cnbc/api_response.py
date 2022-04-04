@@ -6,7 +6,6 @@ class ApiResponseBase(object):
         self.code = code
         self.headers = headers
 
-
 class ApiResponse(ApiResponseBase):
     def __init__(self, code, headers, body, interface):
         # super(ApiResponse, self).__init__(code, headers)
