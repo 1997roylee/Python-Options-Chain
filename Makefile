@@ -1,5 +1,5 @@
 install:
-	python install -r requirements.txt
+	pip install -r requirements.txt
 setup:
 	python setup.py install
 lint:
